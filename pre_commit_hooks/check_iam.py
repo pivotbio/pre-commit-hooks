@@ -16,9 +16,9 @@ def main(argv: Sequence[str] | None = None) -> int:
     for filename in args.filenames:
         if filename == 'iam.tf':
             continue
-        with open(filename, 'rb') as f:
+        with open(filename, 'r') as f:
             try:
-                dict = hcl2.load(f)
+                data = hcl2.load(f)
             except ValueError as exc:
                 print(f'{filename}: Failed to hcl decode ({exc})')
                 retval = 1
