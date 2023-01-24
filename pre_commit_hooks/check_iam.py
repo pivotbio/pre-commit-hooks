@@ -25,14 +25,14 @@ def main(argv: Sequence[str] | None = None) -> int:
         resources = data.get('resource')
         if resources:
             for item in resources:
-                for keys in item:
+                for key in item:
                     if key.startswith('aws_iam'):
                         print(f'{filename}: Has {key} resource')
                         retval = 1
         resources = data.get('data')
         if resources:
             for item in resources:
-                for keys in item:
+                for key in item:
                     if key.startswith('aws_iam'):
                         print(f'{filename}: Has {key} data resource')
                         retval = 1
