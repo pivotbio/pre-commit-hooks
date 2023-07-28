@@ -14,7 +14,7 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     retval = 0
     for filename in args.filenames:
-        if filename == 'iam.tf':
+        if filename == 'iam.tf' or filename.endswith('/iam.tf'):
             continue
         with open(filename, 'r') as f:
             try:
