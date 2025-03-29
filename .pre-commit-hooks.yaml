@@ -205,3 +205,8 @@
     language: python
     types: [text]
     stages: [commit, push, manual]
+-   id: terraform-pre-commit
+    name: terrascan-docker
+    description: Runs terrascan on supported IaC templates.
+    language: script
+    entry: scripts/terrascan-docker.sh 
